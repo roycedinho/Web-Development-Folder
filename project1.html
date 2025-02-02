@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form>
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="name">Full Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="contact">Contact Number:</label><br>
+            <input type="tel" id="contact" name="contact" placeholder="Enter your phone number" required><br><br>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="female" name="gender" value="Female"> <label for="female">Female</label><br>
+            <input type="radio" id="male" name="gender" value="Male"> <label for="male">Male</label><br><br>
+
+            <label for="birthday">Date of Birth:</label><br>
+            <input type="date" id="birthday" name="birthday" required><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Account Details</legend>
+
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="Choose a username" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Enter password" required><br><br>
+
+            <label for="confirm_password">Confirm Password:</label><br>
+            <input type="password" id="confirm_password" name="confirm_password" placeholder="Re-enter password"
+                required><br><br>
+
+            <label for="profile_picture">Upload Profile Picture:</label><br>
+            <input type="file" id="profile_picture" name="profile_picture" accept="image/*"><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Location & Preferences</legend>
+
+            <label for="address">Address:</label><br>
+            <input type="text" id="address" name="address" placeholder="Enter your address" required><br><br>
+
+            <label for="country">Country:</label><br>
+            <select id="country" name="country">
+                <option value="">Select Country</option>
+                <option value="Nigeria">Nigeria</option>
+                <option value="USA">USA</option>
+                <option value="UK">UK</option>
+                <option value="Canada">Canada</option>
+            </select><br><br>
+
+            <label for="state">State:</label><br>
+            <select id="state" name="state">
+                <option value="">Select State</option>
+                <option value="Lagos">Lagos</option>
+                <option value="Abuja">Abuja</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Kaduna">Kaduna</option>
+            </select><br><br>
+
+            <label for="occupation">Occupation:</label><br>
+            <input type="text" id="occupation" name="occupation" placeholder="Enter your occupation"><br><br>
+
+            <label>Favourite City:</label><br>
+            <input type="checkbox" id="city_lagos" name="city" value="Lagos">
+            <label for="city_lagos">Lagos</label><br>
+            <input type="checkbox" id="city_abuja" name="city" value="Abuja">
+            <label for="city_abuja">Abuja</label><br><br>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Interests</legend>
+
+            <label>Select your interests:</label><br>
+            <input type="checkbox" id="sports" name="interests" value="Sports">
+            <label for="sports">Sports</label><br>
+
+            <input type="checkbox" id="music" name="interests" value="Music">
+            <label for="music">Music</label><br>
+
+            <input type="checkbox" id="technology" name="interests" value="Technology">
+            <label for="technology">Technology</label><br>
+
+            <input type="checkbox" id="travel" name="interests" value="Travel">
+            <label for="travel">Travel</label><br><br>
+
+        </fieldset>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+
+</html>
