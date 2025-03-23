@@ -4,32 +4,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royce's School Website</title>
+    <title>Royce Omotayo-Yomes</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
+            font-family: 'Georgia', serif;
             background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
         }
 
         .navbar {
-            background-color: #6c5ce7;
+            background-color: #fff;
+            padding: 15px 0;
         }
 
-        .navbar-brand,
+        .navbar-brand img {
+            height: 100px;
+            /* Increased logo size */
+            display: block;
+        }
+
         .nav-link {
-            color: white !important;
+            color: #000 !important;
+            font-size: 16px;
         }
 
-        .card {
-            border-radius: 15px;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            background-color: #6c5ce7;
-            color: white;
+        .hero-section {
+            position: relative;
+            background: url('https://i.pinimg.com/736x/45/97/95/459795289d744826d1206d5841d2bdf9.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 10px;
+            color: white;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero-content h1 {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero-btn {
+            padding: 10px 20px;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .section {
+            padding: 50px 15px;
+            text-align: center;
         }
     </style>
 </head>
@@ -37,98 +86,41 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">Royce's School Website</a>
+            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/bb/87/f5/bb87f5ca21754b9e76b4480bd8e20937.jpg"
+                    alt="Royce Omotayo-Yomes">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#subjects">Subjects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://instagram.com/roycedinho"
+                            target="_blank">Instagram</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="text-center p-5" style="background-color: #dfe6e9;">
-        <h1>Welcome to My School Website</h1>
-        <p>Discover my academic journey, projects, and hobbies!</p>
-    </header>
-
-    <div class="container mt-5" id="about">
-        <h2 class="text-center">About Me</h2>
-        <p class="text-center">Hi, I'm Royce! I'm a student at Grange School in Ikeja, Lagos. I enjoy learning, coding,
-            playing football, and listening to music.</p>
-    </div>
-
-    <div class="container mt-5" id="subjects">
-        <h2 class="text-center">Subjects I Study</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card p-3 text-center">
-                    <h5>Mathematics</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 text-center">
-                    <h5>Science</h5>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card p-3 text-center">
-                    <h5>French</h5>
-                </div>
-            </div>
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p>Latest on the blog</p>
+            <h1>Finding Myself in the Chaos of Change</h1>
+            <a href="#" class="hero-btn">View</a>
         </div>
-    </div>
+    </section>
 
-    <div class="container mt-5" id="projects">
-        <h2 class="text-center">My Projects</h2>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/dd/03/87/dd0387b326ea9870be9818b459f1429f.jpg"
-                        class="card-img-top" alt="Football">
-                    <div class="card-body">
-                        <h5 class="card-title">Football</h5>
-                        <p class="card-text">I love playing football in my free time, improving my skills and teamwork.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/1f/87/b2/1f87b29a2df46100a75aa86b170a21cb.jpg"
-                        class="card-img-top" alt="Coding">
-                    <div class="card-body">
-                        <h5 class="card-title">Coding</h5>
-                        <p class="card-text">Creating web pages and learning programming languages is my passion.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://i.pinimg.com/736x/7c/c0/a1/7cc0a1cbb0f9aa6e3eada579c3fb0921.jpg"
-                        class="card-img-top" alt="Music">
-                    <div class="card-body">
-                        <h5 class="card-title">Music</h5>
-                        <p class="card-text">Listening to and playing music helps me relax and express myself.</p>
-                    </div>
-                </div>
-            </div>
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi, I'm Royce Omotayo-Yomes. Welcome to my personal blog where I share my journey, thoughts, and
+                experiences.</p>
         </div>
-    </div>
-
-    <div class="container mt-5" id="contact">
-        <h2 class="text-center">Contact Me</h2>
-        <p class="text-center">You can reach me through my school email or social media.</p>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Royce Omotayo-Yomes | Grange School</p>
-    </footer>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
