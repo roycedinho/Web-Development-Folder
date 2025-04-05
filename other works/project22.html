@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Multiplication Calculator</title>
+</head>
+
+<body>
+    <h1>Simple Multiplication Calculator</h1>
+
+    <input type="number" id="num1" placeholder="Enter first number">
+    <input type="number" id="num2" placeholder="Enter second number">
+    <br><br>
+
+    <button onclick="multiplyNumbers()">Multiply</button>
+
+    <h2 id="result">Result: </h2>
+
+    <script>
+        // Function to perform multiplication
+        function multiply(a, b) {
+            return a * b; // Multiply the two parameters (a and b)
+        }
+
+        // Function to get input values and call the multiply function
+        function multiplyNumbers() {
+            let num1 = parseFloat(document.getElementById("num1").value); // Get first number from input
+            let num2 = parseFloat(document.getElementById("num2").value); // Get second number from input
+
+            // Call the multiply function and display the result
+            let result = multiply(num1, num2);
+            document.getElementById("result").innerText = "Result: " + result;
+        }
+    </script>
+</body>
+
+</html>
