@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Methods and Loops Project</title>
+</head>
+
+<body>
+    <h1>Methods and Loops Project</h1>
+    <button onclick="runProject()">Run Project</button>
+
+    <pre id="output"></pre>
+
+    <script>
+        function printRandomNumbers(count) {
+            let result = "Random Numbers:\n";
+            for (let i = 0; i < count; i++) {
+                result += Math.random().toFixed(4) + "\n"; // keeping 4 decimal places
+            }
+            return result;
+        }
+
+        function printCurrentDate() {
+            const currentDate = new Date();
+            return "\nCurrent Date:\n" + currentDate.toString() + "\n";
+        }
+
+        function printRoundedRandomNumber() {
+            const randomNum = Math.random() * 100;
+            const roundedNum = Math.round(randomNum);
+            return "\nRounded Random Number (1–100):\n" + roundedNum + "\n";
+        }
+
+        function runProject() {
+            let output = "";
+            output += printRandomNumbers(5);
+            output += printCurrentDate();
+            output += printRoundedRandomNumber();
+
+            document.getElementById("output").textContent = output;
+        }
+    </script>
+</body>
+
+</html>
