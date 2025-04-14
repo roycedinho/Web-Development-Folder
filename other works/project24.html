@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Arguments in Trigonometry</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        input[type="number"] {
+            padding: 8px;
+            font-size: 16px;
+            margin: 10px 0;
+            width: 200px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sum of Arguments in Trigonometry</h1>
+
+    <label for="angleA">Enter Angle A (in degrees):</label>
+    <input type="number" id="angleA" placeholder="Angle A" required>
+
+    <label for="angleB">Enter Angle B (in degrees):</label>
+    <input type="number" id="angleB" placeholder="Angle B" required>
+
+    <button onclick="calculateTrigonometry()">Calculate</button>
+
+    <div class="result" id="result"></div>
+
+    <script>
+        function calculateTrigonometry() {
+            // Get input values for angles A and B
+            let A = parseFloat(document.getElementById("angleA").value);
+            let B = parseFloat(document.getElementById("angleB").value);
+
+            // Convert degrees to radians
+            let A_rad = A * Math.PI / 180;
+            let B_rad = B * Math.PI / 180;
+
+            // Calculate the sum of sine, cosine, and tangent using the identities
+            let sinSum = Math.sin(A_rad) * Math.cos(B_rad) + Math.cos(A_rad) * Math.sin(B_rad);
+            let cosSum = Math.cos(A_rad) * Math.cos(B_rad) - Math.sin(A_rad) * Math.sin(B_rad);
+            let tanSum = (Math.tan(A_rad) + Math.tan(B_rad)) / (1 - Math.tan(A_rad) * Math.tan(B_rad));
+
+            // Display the results
+            let resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = `
+                <p><strong>sin(A + B) = ${sinSum.toFixed(4)}</strong></p>
+                <p><strong>cos(A + B) = ${cosSum.toFixed(4)}</strong></p>
+                <p><strong>tan(A + B) = ${tanSum.toFixed(4)}</strong></p>
+            `;
+        }
+    </script>
+
+</body>
+</html>
