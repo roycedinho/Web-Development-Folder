@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Object and Array Project</title>
+</head>
+
+<body>
+    <h2>Student Info Display</h2>
+    <p id="output"></p>
+
+    <script>
+        // Step 1: Create objects
+        let student1 = { name: "Royce", age: 14, grade: "Year 9" };
+        let student2 = { name: "Tofunmi", age: 14, grade: "Year 9" };
+
+        // Step 2: Put objects into an array
+        let students = [student1, student2];
+
+        // Step 3: Access and display using keys
+        let output = "Student 1 Name: " + student1.name + "<br>";
+        output += "Student 2 Grade: " + student2.grade + "<br>";
+
+        // Step 4: Access array items using index
+        output += "First student: " + JSON.stringify(students[0]) + "<br>";
+        output += "Second student's age: " + students[1].age + "<br>";
+
+        // Step 5: Use join() on names
+        let names = [student1.name, student2.name];
+        output += "All names joined: " + names.join(", ") + "<br>";
+
+        // Step 6: Use pop()
+        let removedStudent = students.pop();
+        output += "Removed student: " + JSON.stringify(removedStudent) + "<br>";
+        output += "Remaining students: " + JSON.stringify(students) + "<br>";
+
+        // Show result on the page
+        document.getElementById("output").innerHTML = output;
+    </script>
+</body>
+
+</html>
