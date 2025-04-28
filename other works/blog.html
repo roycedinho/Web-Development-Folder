@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Royce Omotayo-Yomes</title>
+    <title>Blog - Memories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <style>
         body {
             font-family: 'Georgia', serif;
-            background-color: #f8f9fa;
+            background-color: #f3f4f6;
             margin: 0;
             padding: 0;
         }
@@ -21,7 +21,6 @@
 
         .navbar-brand img {
             height: 100px;
-            display: block;
         }
 
         .nav-link {
@@ -60,8 +59,8 @@
 
         .hero-section {
             position: relative;
-            background: url('https://i.pinimg.com/736x/45/97/95/459795289d744826d1206d5841d2bdf9.jpg') no-repeat center center/cover;
-            height: 100vh;
+            background: url('https://i.pinimg.com/736x/ce/77/9e/ce779e8e387d042ba7ed3d45051d14ff.jpg') no-repeat center center/cover;
+            height: 50vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -85,28 +84,49 @@
         }
 
         .hero-content h1 {
-            font-size: 32px;
+            font-size: 42px;
             font-weight: bold;
-            margin-bottom: 15px;
         }
 
-        .hero-content p {
-            font-size: 18px;
+        .blog-section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .blog-card {
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-card-body {
+            padding: 30px;
+        }
+
+        .blog-card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .blog-card-date {
+            font-size: 14px;
+            color: gray;
             margin-bottom: 20px;
         }
 
-        .hero-btn {
-            padding: 10px 20px;
-            border: 2px solid white;
-            background: transparent;
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-
-        .section {
-            padding: 50px 15px;
-            text-align: center;
+        .blog-card-text {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #444;
         }
 
         .footer {
@@ -114,7 +134,6 @@
             color: white;
             text-align: center;
             padding: 15px 0;
-            margin-top: 50px;
         }
 
         .footer a {
@@ -129,9 +148,10 @@
 </head>
 
 <body>
+    <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="website.html">
+            <a class="navbar-brand" href="#">
                 <img src="https://i.pinimg.com/736x/bb/87/f5/bb87f5ca21754b9e76b4480bd8e20937.jpg"
                     alt="Royce Omotayo-Yomes" />
             </a>
@@ -141,13 +161,13 @@
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="website.html">Home</a>
+                        <a class="nav-link" href="../website.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
+                        <a class="nav-link active" href="#">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="https://instagram.com/roycedinho" target="_blank">Instagram</a>
@@ -157,22 +177,54 @@
         </div>
     </nav>
 
-    <section class="hero-section" id="home">
+    <!-- HERO -->
+    <section class="hero-section">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <p>Latest on the blog</p>
-            <h1>Finding Myself in the Chaos of Change</h1>
-            <a href="blog.html" class="hero-btn">View</a>
+            <h1>My Memories</h1>
         </div>
     </section>
 
-    <section id="blog" class="section">
-        <div class="container">
-            <h2>Blog</h2>
-            <p>This is the blog section. Posts and updates will go here soon.</p>
+    <!-- BLOG SECTION -->
+    <section class="blog-section">
+        <div class="blog-card">
+            <div class="blog-card-body">
+                <h2 class="blog-card-title">Winning the Football Tournament</h2>
+                <p class="blog-card-date">March 2024</p>
+                <p class="blog-card-text">
+                    One of my proudest moments! Our team worked so hard all season, and finally lifting the trophy was
+                    an unreal feeling. The crowd was cheering, my teammates were jumping, and I felt like a true
+                    champion.
+                </p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-card-body">
+                <h2 class="blog-card-title">Starting Lil Gunna Room Podcast</h2>
+                <p class="blog-card-date">August 2024</p>
+                <p class="blog-card-text">
+                    It all started with a simple idea between me and Tofunmi. Recording that first episode was
+                    nerve-wracking but exciting. Now, it’s become something we’re super proud of, giving our friends a
+                    place to speak and vibe!
+                </p>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-card-body">
+                <h2 class="blog-card-title">Art Project Inspired by Keith Haring</h2>
+                <p class="blog-card-date">March 2025</p>
+                <p class="blog-card-text">
+                    For my Pop Art project, I dived into Keith Haring’s bold and colorful style. It pushed me creatively
+                    and made me appreciate how powerful simple shapes and bright colors can be. Definitely one of my
+                    favorite projects ever.
+                </p>
+            </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <p>&copy; 2025 Royce Omotayo-Yomes. All rights reserved.</p>
@@ -181,17 +233,6 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Highlight active nav-link based on current page
-        const currentLocation = window.location.href;
-        const menuItem = document.querySelectorAll('.nav-link');
-        const menuLength = menuItem.length;
-        for (let i = 0; i < menuLength; i++) {
-            if (menuItem[i].href === currentLocation) {
-                menuItem[i].className += " active";
-            }
-        }
-    </script>
 </body>
 
 </html>
