@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Array Map and Sort</title>
+</head>
+
+<body>
+    <h1>Array Mapping and Sorting</h1>
+    <p id="output"></p>
+
+    <script>
+        // Step 1: Create an array
+        const numbers = [4, 1, 7, 3, 9, 2];
+
+        // Step 2: Map the array (e.g. multiply each by 5)
+        const mapped = numbers.map(num => num * 5);
+
+        // Step 3: Sort in ascending order
+        const ascending = [...mapped].sort((a, b) => a - b);
+
+        // Step 4: Sort in descending order
+        const descending = [...mapped].sort((a, b) => b - a);
+
+        // Display results
+        const output = document.getElementById("output");
+        output.innerHTML = `
+      <strong>Original Array:</strong> ${numbers.join(', ')}<br>
+      <strong>Mapped Array (×5):</strong> ${mapped.join(', ')}<br>
+      <strong>Ascending Order:</strong> ${ascending.join(', ')}<br>
+      <strong>Descending Order:</strong> ${descending.join(', ')}
+    `;
+
+        // Also log to console
+        console.log("Original:", numbers);
+        console.log("Mapped:", mapped);
+        console.log("Ascending:", ascending);
+        console.log("Descending:", descending);
+    </script>
+</body>
+
+</html>

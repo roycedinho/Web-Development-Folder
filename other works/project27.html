@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Print Random Numbers</title>
+</head>
+
+<body>
+    <h1>Random Numbers</h1>
+    <ul id="random-numbers-list"></ul>
+
+    <script>
+        let count = 0;
+        const list = document.getElementById("random-numbers-list");
+
+        while (count < 10) {
+            let randomNumber = Math.floor(Math.random() * 100); // 0 to 99
+            console.log(randomNumber); // Prints to console
+
+            // Add number to the webpage
+            let listItem = document.createElement("li");
+            listItem.textContent = randomNumber;
+            list.appendChild(listItem);
+
+            count++;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Class Inheritance with Static Method</title>
+</head>
+
+<body>
+    <h1>Class Inheritance Demo</h1>
+    <p id="output"></p>
+
+    <script>
+        // Base class
+        class Person {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+
+            // Regular method
+            getDetails() {
+                return `Name: ${this.name}, Age: ${this.age}`;
+            }
+
+            // Static method
+            static description() {
+                return "This is a person class.";
+            }
+        }
+
+        // Subclass that inherits from Person
+        class Student extends Person {
+            constructor(name, age, grade) {
+                super(name, age); // Call the constructor of Person
+                this.grade = grade;
+            }
+
+            // Method in subclass
+            getStudentDetails() {
+                return `${super.getDetails()}, Grade: ${this.grade}`;
+            }
+        }
+
+        // Using the classes
+        const student1 = new Student("Royce", 14, "Year 9");
+
+        // Output to page
+        const output = document.getElementById("output");
+        output.innerHTML = `
+      <strong>Student Info:</strong> ${student1.getStudentDetails()}<br>
+      <strong>Static Info:</strong> ${Person.description()}
+    `;
+
+        // Also log to console
+        console.log(student1.getStudentDetails());
+        console.log(Person.description());
+    </script>
+</body>
+
+</html>
