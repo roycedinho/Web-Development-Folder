@@ -1,0 +1,51 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #252525;
+    font-family: "Baloo Tamma 2", cursive;
+}
+
+.m-heading {
+    font-family: "Roboto Slab", serif;
+}
+
+.navigation-link{
+    border: 2px solid transparent;
+}
+
+.navigation-link:hover {
+    text-decoration: none;
+    border-bottom: 2px solid #f5ba09;
+    transition: 0.5s ease;
+}
+
+.text-white {
+    color:white;
+}
+
+.main-container {
+    height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url('gabi.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_row h1{
+    font-size: 5rem;
+}
+
+.main_row {
+    width: auto;
+    height: 100vh;
+}
