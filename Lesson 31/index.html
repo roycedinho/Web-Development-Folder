@@ -1,96 +1,176 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Bootstrap CSS -->
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 
     <!-- My CSS -->
-
     <link rel="stylesheet" href="style.css" />
 
     <!-- Font Awesome -->
-
-    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+    <script src="https://kit.fontawesome.com/996973c893.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts -->
-
     <link
         href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
         rel="stylesheet" />
 
     <title>Portfolio</title>
-
 </head>
+
 <body>
 
+    <!-- Navigation -->
     <div class="container navigation pt-3">
-
         <div class="row">
-
             <div class="col-6 d-flex justify-content-start align-items-center">
-
                 <i class="fa fa-spinner fa-spin fa-3x fa-fw text-warning pb-3"></i>
-
                 <h5 class="d-inline pl-2 text-white">Royce Omotayo-Yomes</h5>
-
             </div>
-
             <div class="col-6 pt-2">
-
                 <div class="row text-center p-0 d-flex justify-content-end align-items-center">
-
                     <div class="col-3">
-
                         <a href="#about" class="text-white navigation-link">About</a>
-
                     </div>
-
                     <div class="col-3">
-
                         <a href="#projects" class="text-white navigation-link">Projects</a>
-
                     </div>
-
                     <div class="col-3">
-
                         <a href="#social-media" class="text-white navigation-link">Social Media</a>
-
                     </div>
-
                     <div class="col-3">
-
                         <a href="https://packetcode.github.io/web-development-crash-course/resume-mini-project/"
                             target="_blank" class="text-white navigation-link">Resume</a>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </div>
 
     <!-- Main Container -->
-    
     <div class="main-container container">
-    
         <h2 class="text-white">Hello, I'm</h2>
-    
         <h1 class="text-warning m-heading">Royce</h1>
-    
         <h2 class="text-white">Coding Education</h2>
-    
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="container about p-5">
+        <div class="row">
+            <div class="col-6">
+                <img src="images/about_img.jpg" class="img-fluid" alt="..." />
+            </div>
+            <div class="col-6 pl-5 pt-5 pb-5 text-white">
+                <h3 class="text-warning">About Codingal</h3>
+                <h1 class="m-heading">A little bit about me</h1>
+                <p>
+                    <b class="text-warning">Codingal</b> is on a mission to inspire school kids to
+                    <b class="text-warning">fall in love with coding</b>. Coding helps develop logical thinking and
+                    problem-solving skills.
+                    Coding jobs are the future. They already constitute more than 60% of all jobs in STEM.
+                    Starting young means students will be ahead by college. They will be the <b
+                        class="text-warning">creators of the future</b>.
+                </p>
+                <p>
+                    In today’s age, <b class="text-warning">coding</b> has become an essential skill. It helps kids
+                    interact better with technology.
+                    It aids holistic development—boosting cognitive, physical, and social skills. Coding encourages both
+                    mental growth and social understanding.
+                </p>
+                <button class="btn btn-outline-warning">Learn more</button>
+            </div>
         </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="container mt-5 pt-5">
+        <h1 class="text-warning mb-3 pb-2">My Projects</h1>
+        <div class="row">
+
+            <!-- Project 1 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/messaging.jpg" class="card-img-top" style="height: 13rem;" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Messaging Web App</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/fitness.jpg" class="card-img-top img-fluid" alt="..." style="height: 13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">Fitness Tracker</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/e_commerce_platform.jpg" class="card-img-top img-fluid" alt="..."
+                        style="height: 13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">E-Commerce Platform</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/music.jpg" class="card-img-top img-fluid" alt="..."
+                        style="height: 13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">Music Player</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/photography.jpg" class="card-img-top img-fluid" alt="..."
+                        style="height: 13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">Photography Portfolio</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="col-4 mb-5">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/web_scraping.jpg" class="card-img-top img-fluid" alt="..." style="height: 13rem;" />
+                    <div class="card-body">
+                        <h5 class="card-title">Manga Scraping Web App</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                            content.
+                        </p>
+                        <a href="#" class="btn btn-warning">See Project</a>
+                    </div>
+                </div>
+            </div>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
 
 </body>
