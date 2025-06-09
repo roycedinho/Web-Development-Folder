@@ -6,145 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog - Memories</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f3f4f6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #fff;
-            padding: 15px 0;
-        }
-
-        .navbar-brand img {
-            height: 100px;
-        }
-
-        .nav-link {
-            position: relative;
-            color: #000 !important;
-            font-size: 16px;
-            margin: 0 10px;
-            padding-bottom: 5px;
-            transition: all 0.3s ease;
-            opacity: 0.6;
-        }
-
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background-color: black;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            opacity: 1 !important;
-        }
-
-        .nav-link.active {
-            font-weight: bold;
-            opacity: 1 !important;
-        }
-
-        .hero-section {
-            position: relative;
-            background: url('https://i.pinimg.com/736x/ce/77/9e/ce779e8e387d042ba7ed3d45051d14ff.jpg') no-repeat center center/cover;
-            height: 50vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
-
-        .hero-content h1 {
-            font-size: 42px;
-            font-weight: bold;
-        }
-
-        .blog-section {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-        .blog-card {
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .blog-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .blog-card-body {
-            padding: 30px;
-        }
-
-        .blog-card-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .blog-card-date {
-            font-size: 14px;
-            color: gray;
-            margin-bottom: 20px;
-        }
-
-        .blog-card-text {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        .footer a {
-            color: #f8d210;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="blog-css.css" />
 </head>
 
 <body>
@@ -158,23 +21,16 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../website.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://instagram.com/roycedinho" target="_blank">Instagram</a>
+            <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarNav">
+                <ul class="navbar-nav me-3">
+                    <a class="nav-link" href="website.html">Home</a>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="https://instagram.com/roycedinho" target="_blank">Instagram</a>
                     </li>
                 </ul>
-            </div>
-        </div>
+                <button class="btn btn-sm btn-outline-secondary" id="toggleDark">Toggle Dark Mode</button>
+            </div>              
     </nav>
 
     <!-- HERO -->
@@ -182,47 +38,115 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>My Memories</h1>
+            <input type="text" class="form-control mt-4" id="searchInput" placeholder="Search memories..." />
         </div>
     </section>
 
     <!-- BLOG SECTION -->
-    <section class="blog-section">
-        <div class="blog-card">
-            <div class="blog-card-body">
-                <h2 class="blog-card-title">Winning the Football Tournament</h2>
-                <p class="blog-card-date">March 2024</p>
-                <p class="blog-card-text">
-                    One of my proudest moments! Our team worked so hard all season, and finally lifting the trophy was
-                    an unreal feeling. The crowd was cheering, my teammates were jumping, and I felt like a true
-                    champion.
-                </p>
-            </div>
-        </div>
+    <section class="blog-section container py-5" id="blogPosts">
+        <!-- Blog Post Card Template (repeated below with real data) -->
+        <div class="row g-4">
 
-        <div class="blog-card">
-            <div class="blog-card-body">
-                <h2 class="blog-card-title">Starting Lil Gunna Room Podcast</h2>
-                <p class="blog-card-date">August 2024</p>
-                <p class="blog-card-text">
-                    It all started with a simple idea between me and Tofunmi. Recording that first episode was
-                    nerve-wracking but exciting. Now, it’s become something we’re super proud of, giving our friends a
-                    place to speak and vibe!
-                </p>
+            <!-- Blog Card -->
+            <div class="col-md-6 col-lg-4 blog-entry" data-title="football tournament" data-aos="fade-up">
+                <div class="blog-card" data-bs-toggle="modal" data-bs-target="#modal1">
+                    <img src="https://i.pinimg.com/736x/f4/c6/77/f4c6774aebec9f462a0cd9c492ff3969.jpg"
+                        alt="Football Tournament" class="img-fluid blog-image" />
+                    <div class="blog-card-body">
+                        <h2 class="blog-card-title">Winning the Football Tournament</h2>
+                        <p class="blog-card-date">March 2024</p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <div class="blog-card">
-            <div class="blog-card-body">
-                <h2 class="blog-card-title">Art Project Inspired by Keith Haring</h2>
-                <p class="blog-card-date">March 2025</p>
-                <p class="blog-card-text">
-                    For my Pop Art project, I dived into Keith Haring’s bold and colorful style. It pushed me creatively
-                    and made me appreciate how powerful simple shapes and bright colors can be. Definitely one of my
-                    favorite projects ever.
-                </p>
+            <div class="col-md-6 col-lg-4 blog-entry" data-title="podcast" data-aos="fade-up">
+                <div class="blog-card" data-bs-toggle="modal" data-bs-target="#modal2">
+                    <img src="https://i.pinimg.com/736x/3d/f0/0f/3df00f73c3fb7df0305ec950261eddeb.jpg" alt="Podcast"
+                        class="img-fluid blog-image" />
+                    <div class="blog-card-body">
+                        <h2 class="blog-card-title">Starting Lil Gunna Room Podcast</h2>
+                        <p class="blog-card-date">August 2024</p>
+                    </div>
+                </div>
             </div>
+
+            <div class="col-md-6 col-lg-4 blog-entry" data-title="art project" data-aos="fade-up">
+                <div class="blog-card" data-bs-toggle="modal" data-bs-target="#modal3">
+                    <img src="https://i.pinimg.com/736x/dd/f2/09/ddf209903611734b9ededaebf1e65b13.jpg" alt="Art Project"
+                        class="img-fluid blog-image" />
+                    <div class="blog-card-body">
+                        <h2 class="blog-card-title">Art Project Inspired by Keith Haring</h2>
+                        <p class="blog-card-date">March 2025</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 blog-entry" data-title="dofe" data-aos="fade-up">
+                <div class="blog-card" data-bs-toggle="modal" data-bs-target="#modal4">
+                    <img src="https://i.pinimg.com/736x/e3/30/c1/e330c19253985c77b79251cb284af0bf.jpg" alt="DofE"
+                        class="img-fluid blog-image" />
+                    <div class="blog-card-body">
+                        <h2 class="blog-card-title">My DofE Journey</h2>
+                        <p class="blog-card-date">April 2025</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
+
+    <!-- MODALS -->
+    <div class="modal fade" id="modal1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <h2>Winning the Football Tournament</h2>
+                    <p>One of my proudest moments! Our team worked so hard all season, and finally lifting the trophy
+                        was an unreal feeling. The crowd was cheering, my teammates were jumping, and I felt like a true
+                        champion.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <h2>Starting Lil Gunna Room Podcast</h2>
+                    <p>It all started with a simple idea between me and Tofunmi. Recording that first episode was
+                        nerve-wracking but exciting. Now, it’s become something we’re super proud of, giving our friends
+                        a place to speak and vibe!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <h2>Art Project Inspired by Keith Haring</h2>
+                    <p>For my Pop Art project, I dived into Keith Haring’s bold and colorful style. It pushed me
+                        creatively and made me appreciate how powerful simple shapes and bright colors can be.
+                        Definitely one of my favorite projects ever.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal4" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-body p-4">
+                    <h2>My DofE Journey</h2>
+                    <p>The Duke of Edinburgh Award has been a life-changing experience. From volunteering to adventurous
+                        hikes, I’ve learned responsibility, teamwork, and resilience. Whether it was getting soaked in
+                        the rain or helping out at community centres, every moment was worth it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -233,6 +157,18 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        document.getElementById("searchInput").addEventListener("input", function () {
+            const filter = this.value.toLowerCase();
+            document.querySelectorAll(".blog-entry").forEach(function (card) {
+                const title = card.getAttribute("data-title");
+                card.style.display = title.includes(filter) ? "" : "none";
+            });
+        });
+    </script>
 </body>
 
 </html>

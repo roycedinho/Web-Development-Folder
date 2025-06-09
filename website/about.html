@@ -3,175 +3,45 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f3f4f6;
-            margin: 0;
-            padding: 0;
-        }
-
-        .navbar {
-            background-color: #fff;
-            padding: 15px 0;
-        }
-
-        .navbar-brand img {
-            height: 100px;
-        }
-
-        .nav-link {
-            position: relative;
-            color: #000 !important;
-            font-size: 16px;
-            margin: 0 10px;
-            padding-bottom: 5px;
-            transition: all 0.3s ease;
-            opacity: 0.6;
-        }
-
-        .nav-link::after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 2px;
-            left: 0;
-            bottom: 0;
-            background-color: black;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .nav-link:hover {
-            opacity: 1 !important;
-        }
-
-        .nav-link.active {
-            font-weight: bold;
-            opacity: 1 !important;
-        }
-
-        .hero-section {
-            position: relative;
-            background: url('https://i.pinimg.com/736x/45/97/95/459795289d744826d1206d5841d2bdf9.jpg') no-repeat center center/cover;
-            height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 600px;
-        }
-
-        .hero-content h1 {
-            font-size: 42px;
-            font-weight: bold;
-        }
-
-        .container-box {
-            display: flex;
-            background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-width: 900px;
-            margin: 60px auto;
-        }
-
-        .image-container {
-            flex: 1;
-            background-color: #e5e7eb;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .text-container {
-            flex: 2;
-            padding: 40px;
-        }
-
-        .text-container h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .text-container p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        .footer {
-            background-color: #343a40;
-            color: white;
-            text-align: center;
-            padding: 15px 0;
-        }
-
-        .footer a {
-            color: #f8d210;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Royce Omotayo-Yomes | Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="abcss.css">
 </head>
 
 <body>
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://i.pinimg.com/736x/bb/87/f5/bb87f5ca21754b9e76b4480bd8e20937.jpg"
-                    alt="Royce Omotayo-Yomes" />
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../website.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#blog">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://instagram.com/roycedinho" target="_blank">Instagram</a>
-                    </li>
-                </ul>
-            </div>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="https://i.pinimg.com/736x/bb/87/f5/bb87f5ca21754b9e76b4480bd8e20937.jpg"
+                alt="Royce Omotayo-Yomes" />
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="website.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://127.0.0.1:5500/website/blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://instagram.com/roycedinho" target="_blank">Instagram</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>  
 
     <!-- HERO -->
     <section class="hero-section">
@@ -189,14 +59,198 @@
         <div class="text-container">
             <h2>About Me</h2>
             <p>
-                Hey! I'm Royce, and I love creating cool stuff, whether it's podcasts like Lil Gunna Room or creative
-                class projects.
-                I'm passionate about football, art, and storytelling. I'm always down to learn new things and vibe with
-                good energy.
-                Let's make magic happen ✨⚽🎨
+
+                
+                Royce Omotayo-Yomes is a creative mind from Lagos, Nigeria, whose passion for storytelling and innovation has shaped his
+                journey. From producing podcasts to delivering creative school projects, Royce combines his love for
+                football, art, and media to craft meaningful experiences. <br><br>
+                
+                Since a young age, he has been driven by curiosity and a desire to connect with others through various creative outlets.
+                Whether it’s behind the mic, on the football field, or designing visual content, Royce approaches every project with
+                dedication and a fresh perspective. <br><br>
+                
+                Beyond his creative pursuits, Royce is committed to growth and learning, always exploring new skills and ideas to
+                elevate his work. His vision is to inspire, entertain, and build communities that thrive on positivity and shared
+                passion. <br><br>
+                
+                Royce balances his creative career with a strong sense of family and friendship, embracing every opportunity to vibe,
+                collaborate, and make magic happen. <br><br>
+                
+                
             </p>
         </div>
     </div>
+<!--Timeline-->
+
+<section id="timeline" class="timeline-section py-5">
+    <div class="container">
+
+        <h2 class="text-center mb-4">My Life Timeline</h2>
+
+        <div class="memory-display mb-5 p-4 shadow-sm rounded bg-white border" id="memoryDisplay">
+            Hover over or tap a year to see the memory here.
+        </div>
+
+        <div
+            class="timeline-bar d-flex justify-content-start align-items-center position-relative flex-nowrap overflow-auto">
+
+            <div class="timeline-year" data-year="2011" data-memory="I was born, marking the beginning of my journey.">
+                2011</div>
+            <div class="timeline-year" data-year="2012"
+                data-memory="Preschool days started, and I celebrated my very first birthday surrounded by friends and fun.">
+                2012</div>
+            <div class="timeline-year" data-year="2013"
+                data-memory="More preschool adventures and making early memories with classmates.">2013</div>
+            <div class="timeline-year" data-year="2014"
+                data-memory="Traveled to some exciting new places, sparking my love for exploration.">2014</div>
+            <div class="timeline-year" data-year="2015"
+                data-memory="My first clear memory of celebrating my birthday; those moments started to become special.">
+                2015</div>
+            <div class="timeline-year" data-year="2016"
+                data-memory='I joined <a href="https://grangeschool.com/" target="_blank" rel="noopener noreferrer">Grange School</a>, beginning my formal education journey.'>
+                2016</div>
+            <div class="timeline-year" data-year="2017"
+                data-memory="This year brought new friendships and exciting school projects that sparked my creativity.">
+                2017</div>
+            <div class="timeline-year" data-year="2018"
+                data-memory="I enjoyed the 2018 World Cup and spent lots of time with friends playing football and creating fun memories.">
+                2018</div>
+            <div class="timeline-year" data-year="2019"
+                data-memory="This year was full of learning new skills and discovering passions through various creative projects.">
+                2019</div>
+            <div class="timeline-year" data-year="2020"
+                data-memory="COVID-19 hit, and schools shut down — my birthday was quiet but marked a new way of learning and living.">
+                2020</div>
+            <div class="timeline-year" data-year="2021"
+                data-memory="Attended school online, adapting to virtual classes and finding new ways to stay connected with friends.">
+                2021</div>
+            <div class="timeline-year" data-year="2022"
+                data-memory="Traveled to the UK in August, exploring new cultures and broadening my horizons.">2022
+            </div>
+            <div class="timeline-year" data-year="2023"
+                data-memory="Found myself on the verge of Year 7 and Year 8, reflecting on growth and setting new goals.">
+                2023</div>
+            <div class="timeline-year" data-year="2024"
+                data-memory="Finished Year 8, traveled to new places, experienced many events, and started Year 9 with fresh energy.">
+                2024</div>
+            <div class="timeline-year" data-year="2025"
+                data-memory="Present year — life is going well, and I'm excited for what the future holds.">2025</div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    /* SECTION BACKGROUND AND CONTAINER */
+    .timeline-section {
+        background: linear-gradient(to right, #f8f9fa, #e0f0ff);
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .timeline-section h2 {
+        font-weight: 700;
+        font-size: 2.2rem;
+        color: #333;
+    }
+
+    /* MEMORY DISPLAY AREA */
+    .memory-display {
+        min-height: 100px;
+        font-size: 1.15rem;
+        color: #333;
+        background-color: #ffffff;
+        border-left: 5px solid #007bff;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+        transition: background-color 0.3s;
+    }
+
+    .memory-display a {
+        color: #007bff;
+        text-decoration: underline;
+    }
+
+    /* TIMELINE BAR */
+    .timeline-bar {
+        border-top: 3px solid #007bff;
+        padding-top: 20px;
+        gap: 16px;
+        scroll-behavior: smooth;
+    }
+
+    .timeline-bar::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .timeline-bar::-webkit-scrollbar-track {
+        background: #e9ecef;
+    }
+
+    .timeline-bar::-webkit-scrollbar-thumb {
+        background-color: #007bff;
+        border-radius: 4px;
+    }
+
+    /* YEAR CIRCLES */
+    .timeline-year {
+        background: #007bff;
+        color: white;
+        font-weight: 600;
+        padding: 10px 20px;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    .timeline-year:hover,
+    .timeline-year.active {
+        background: #0056b3;
+        transform: scale(1.1);
+        box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+
+    @media (max-width: 576px) {
+        .timeline-year {
+            padding: 8px 14px;
+            font-size: 0.9rem;
+        }
+
+        .memory-display {
+            font-size: 1rem;
+        }
+    }
+</style>
+
+<script>
+    // Timeline interaction
+    const timelineYears = document.querySelectorAll('.timeline-year');
+    const memoryDisplay = document.getElementById('memoryDisplay');
+
+    function showMemory(e) {
+        timelineYears.forEach(y => y.classList.remove('active'));
+
+        const target = e.currentTarget;
+        target.classList.add('active');
+
+        memoryDisplay.innerHTML = target.getAttribute('data-memory');
+    }
+
+    // Event listeners
+    timelineYears.forEach(year => {
+        year.addEventListener('mouseenter', showMemory);
+        year.addEventListener('click', showMemory);
+    });
+
+    // Set default memory
+    timelineYears[0].classList.add('active');
+    memoryDisplay.innerHTML = timelineYears[0].getAttribute('data-memory');
+</script>
+  
+
+
+    
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -206,7 +260,12 @@
         </div>
     </footer>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

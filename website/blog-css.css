@@ -1,0 +1,71 @@
+.blog-card {
+    max-width: 800px;
+    margin: 40px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.blog-card:hover {
+    transform: scale(1.02);
+}
+
+.blog-card img {
+    height: 240px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog-card-body {
+    padding: 1.5rem;
+    background-color: #fff;
+}
+
+.blog-card-title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-card-date {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+/* Logo sizing */
+.navbar-brand img {
+    max-height: 50px;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode .blog-card-body {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+body.dark-mode .navbar,
+body.dark-mode .footer {
+    background-color: #1c1c1c;
+    color: #f1f1f1;
+}
+
+body.dark-mode .nav-link {
+    color: #ddd !important;
+}
+
+body.dark-mode .nav-link.active {
+    color: #fff !important;
+}
+
+body.dark-mode .form-control {
+    background-color: #2a2a2a;
+    color: #f1f1f1;
+    border-color: #444;
+}
